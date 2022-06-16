@@ -9,6 +9,9 @@ import WorkIcon from '@mui/icons-material/Work';
 import ReceiptIcon from '@mui/icons-material/Receipt';
 import DescriptionIcon from '@mui/icons-material/Description';
 import StoreIcon from '@mui/icons-material/Store';
+import HistoryIcon from '@mui/icons-material/History';
+import SettingsIcon from '@mui/icons-material/Settings';
+import LoginIcon from '@mui/icons-material/Login';
 
 // routes data
 export const sidebarData = [
@@ -64,17 +67,17 @@ export const sidebarData = [
   },
   {
     title: "Log History",
-    icon: <DescriptionIcon />,
+    icon: <HistoryIcon />,
     link: "/log-history",
   },
   {
     title: "Settings",
-    icon: <DescriptionIcon />,
+    icon: <SettingsIcon />,
     link: "/settings",
   },
   {
     title: "Login",
-    icon: <DescriptionIcon />,
+    icon: <LoginIcon />,
     link: "/login",
   },
 ];
