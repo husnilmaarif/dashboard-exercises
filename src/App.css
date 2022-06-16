@@ -36,3 +36,181 @@
     transform: rotate(360deg);
   }
 }
+
+/* ============================================================================ */
+
+/* body {
+  margin: 0;
+  padding: 0;
+} */
+
+/* main */
+/* .main {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  transition: 0.5s;
+} */
+
+/* header */
+/* header {
+  position: relative;
+  padding: 10px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  transition: 0.5s;
+} */
+
+/* .header-toggle {
+  left: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  color: black;
+} */
+
+/* .profil-desk,
+.profil-desk span {
+  color: white;
+} */
+
+/* sidebar */
+/* .sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  height: 100vh;
+  width: 250px;
+  background-color: white !important;
+  transition: 0.5s;
+} */
+
+/* .sidebarList {
+  height: auto;
+  padding: 0;
+  width: 100%;
+} */
+
+/* .active {
+  color: #23c2c6 !important;
+} */
+
+/* .sidebarList .row {
+  width: 100%;
+  height: 50px;
+  text-decoration: none !important;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: black !important;
+  font-weight: bold;
+}
+
+.sidebarList .row:hover {
+  color: #23c2c6 !important;
+  cursor: pointer;
+} */
+
+/* background pages */
+/* .background-pages {
+  position: relative;
+} */
+
+/* pagination */
+/* .paginationBttns {
+  width: 80%;
+  height: 40px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.paginationBttns a {
+  color: black;
+  padding: 10px;
+  margin: 8px;
+  border-radius: 5px;
+  border: solid skyblue;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+} */
+/* 
+.paginationBttns a:hover {
+  color: white !important;
+  background-color: black !important;
+} */
+
+/* ================================== */
+/* @media screen and (min-width: 768px) {
+  .profil-desk {
+    color: black;
+  } */
+
+  /* .active {
+    color: #23c2c6 !important;
+  }
+
+  .profil-desk span {
+    color: #23c2c6;
+  }
+
+  .sidebar {
+    position: fixed;
+    left: 0;
+    transition: 0.5s;
+    width: 250px;
+    height: 100vh;
+  } */
+/* 
+  .sidebarList .row {
+    height: 50px;
+    text-decoration: none !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: black !important;
+  }
+
+  .sidebarList .row:hover {
+    color: #23c2c6 !important;
+    cursor: pointer;
+  } */
+
+  /* background pages */
+  /* .background-pages {
+    position: relative;
+    margin-left: 250px;
+  } */
+
+  /* pagination */
+  /* .paginationBttns {
+    width: 80%;
+    height: 40px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+  }
+
+  .paginationBttns a {
+    color: black;
+    padding: 10px;
+    margin: 8px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .paginationBttns a:hover {
+    color: white !important;
+    background-color: black !important;
+  }
+} */
