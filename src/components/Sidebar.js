@@ -14,7 +14,7 @@ export default function Sidebar() {
         <img
           src={logo}
           alt="logo"
-          className="justify-content-center ms-2 my-4"
+          className="justify-content-center ms-2 my-4 pt-1"
           width={150}
         />
         {sidebarData.map((value, index) => {
