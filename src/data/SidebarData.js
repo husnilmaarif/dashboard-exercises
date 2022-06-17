@@ -80,4 +80,9 @@ export const sidebarData = [
     icon: <LoginIcon />,
     link: "/login",
   },
+  {
+    title: "Register",
+    icon: <LoginIcon />,
+    link: "/register",
+  },
 ];
