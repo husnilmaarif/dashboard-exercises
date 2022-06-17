@@ -1,12 +1,7 @@
-import React from 'react'
-import Process from '../components/Process'
+import React from "react";
 
 function Login() {
-  return (
-    <>
-    <Process />
-  </>
-  )
+  return <div>Login</div>;
 }
 
-export default Login
+export default Login;

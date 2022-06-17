@@ -1,12 +1,7 @@
 import React from "react";
-import Process from "../components/Process";
 
 function Quotation() {
-  return (
-    <>
-      <Process />
-    </>
-  );
+  return <div>Quotation</div>;
 }
 
 export default Quotation;

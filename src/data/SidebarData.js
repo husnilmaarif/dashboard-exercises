@@ -1,17 +1,17 @@
 // icons
 import HomeIcon from "@mui/icons-material/Home";
-import BusinessIcon from '@mui/icons-material/Business';
-import BadgeIcon from '@mui/icons-material/Badge';
-import PersonIcon from '@mui/icons-material/Person';
-import AirportShuttleIcon from '@mui/icons-material/AirportShuttle';
-import InsertDriveFileIcon from '@mui/icons-material/InsertDriveFile';
-import WorkIcon from '@mui/icons-material/Work';
-import ReceiptIcon from '@mui/icons-material/Receipt';
-import DescriptionIcon from '@mui/icons-material/Description';
-import StoreIcon from '@mui/icons-material/Store';
-import HistoryIcon from '@mui/icons-material/History';
-import SettingsIcon from '@mui/icons-material/Settings';
-import LoginIcon from '@mui/icons-material/Login';
+import BusinessIcon from "@mui/icons-material/Business";
+import BadgeIcon from "@mui/icons-material/Badge";
+import PersonIcon from "@mui/icons-material/Person";
+import AirportShuttleIcon from "@mui/icons-material/AirportShuttle";
+import InsertDriveFileIcon from "@mui/icons-material/InsertDriveFile";
+import WorkIcon from "@mui/icons-material/Work";
+import ReceiptIcon from "@mui/icons-material/Receipt";
+import DescriptionIcon from "@mui/icons-material/Description";
+import StoreIcon from "@mui/icons-material/Store";
+import HistoryIcon from "@mui/icons-material/History";
+import SettingsIcon from "@mui/icons-material/Settings";
+import LoginIcon from "@mui/icons-material/Login";
 
 // routes data
 export const sidebarData = [
@@ -28,7 +28,7 @@ export const sidebarData = [
   {
     title: "Employee",
     icon: <BadgeIcon />,
-    link: "/empoloyee",
+    link: "/employee",
   },
   {
     title: "Customer",

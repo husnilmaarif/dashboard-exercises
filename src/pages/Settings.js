@@ -1,11 +1,8 @@
 import React from 'react'
-import Process from '../components/Process'
 
 function Settings() {
   return (
-    <>
-      <Process />
-    </>
+    <div>Settings</div>
   )
 }
 

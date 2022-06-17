@@ -1,12 +1,7 @@
 import React from "react";
-import Process from "../components/Process";
 
 function Employee() {
-  return (
-    <>
-      <Process />
-    </>
-  );
+  return <div>Employee</div>;
 }
 
 export default Employee;

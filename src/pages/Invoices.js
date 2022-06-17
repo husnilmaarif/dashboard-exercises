@@ -1,12 +1,7 @@
 import React from "react";
-import Process from "../components/Process";
 
 function Invoices() {
-  return (
-    <>
-      <Process />
-    </>
-  );
+  return <div>Invoices</div>;
 }
 
 export default Invoices;

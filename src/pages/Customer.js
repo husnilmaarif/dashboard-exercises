@@ -1,12 +1,7 @@
 import React from "react";
-import Process from "../components/Process";
 
 function Customer() {
-  return (
-    <>
-      <Process />
-    </>
-  );
+  return <div>Customer</div>;
 }
 
 export default Customer;

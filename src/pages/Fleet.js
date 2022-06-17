@@ -1,12 +1,7 @@
 import React from "react";
-import Process from "../components/Process";
 
 function Fleet() {
-  return (
-    <>
-      <Process />
-    </>
-  );
+  return <div>Fleet</div>;
 }
 
 export default Fleet;

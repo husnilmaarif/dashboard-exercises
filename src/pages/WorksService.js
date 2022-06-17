@@ -1,12 +1,7 @@
 import React from "react";
-import Process from "../components/Process";
 
 function WorksService() {
-  return (
-    <>
-      <Process />
-    </>
-  );
+  return <div>WorksService</div>;
 }
 
 export default WorksService;

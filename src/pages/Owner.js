@@ -1,12 +1,7 @@
 import React from "react";
-import Process from "../components/Process";
 
 function Owner() {
-  return (
-    <>
-      <Process />
-    </>
-  );
+  return <div>Owner</div>;
 }
 
 export default Owner;

@@ -1,12 +1,7 @@
 import React from "react";
-import Process from "../components/Process";
 
 function Workday() {
-  return (
-    <>
-      <Process />
-    </>
-  );
+  return <div>Workday</div>;
 }
 
 export default Workday;
