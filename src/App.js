@@ -30,10 +30,10 @@ function App() {
           <div className="col-md-2 bg-white">
             <Sidebar />
           </div>
-          <div className="col-md-10 bg-info">
+          <div className="col-md-10 bg-light">
             <Header />
             <Routes>
-              <Route path="/" element={<Dashboard />} />
+              <Route path="/" exact element={<Dashboard />} />
               <Route path="/company" element={<Company />} />
               <Route path="/employee" element={<Employee />} />
               <Route path="/customer" element={<Customer />} />

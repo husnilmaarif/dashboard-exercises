@@ -1,17 +1,45 @@
 import "./Header.css";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Form, InputGroup, FormControl, Button } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
+import { auth } from "../config/Firebase";
+import { signOut } from "firebase/auth";
+import { onAuthStateChanged } from "firebase/auth";
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNoneOutlined";
 import profile from "../assets/profile.png";
+import LogoutIcon from "@mui/icons-material/Logout";
 
 function Header() {
   const [user, setUser] = useState("");
+  const [userAuth, setUserAuth] = useState(false);
+  const [name, setName] = useState("");
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setUserAuth(true);
+        setName(user.displayName);
+      } else {
+        setUserAuth(false);
+        navigate("/login");
+      }
+    });
+  });
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("berhasil");
+  };
+
+  // loguot
+  const logout = () => {
+    signOut(auth).then(() => {
+      navigate("/login");
+    });
   };
 
   return (
@@ -37,20 +65,34 @@ function Header() {
         </div>
 
         <div className="col-md-5">
-          <Button variant="light" className="rounded-pill">
-            <HelpOutlineIcon />
-          </Button>
-          <Button variant="light" className="rounded-pill">
-            <InfoOutlinedIcon />
-          </Button>
-          <Button variant="light" className="rounded-pill">
-            <NotificationsNoneOutlinedIcon />
-          </Button>
-          <span className="span-notif position-relative translate-middle badge rounded-pill bg-danger ms-1">
-            3
-          </span>
+          <div className="row">
+            <div className="col">
+              <Button variant="light" className="rounded-pill">
+                <HelpOutlineIcon />
+              </Button>
+              <Button variant="light" className="rounded-pill">
+                <InfoOutlinedIcon />
+              </Button>
+              <Button variant="light" className="rounded-pill">
+                <NotificationsNoneOutlinedIcon />
+              </Button>
+              <span className="span-notif position-relative translate-middle badge rounded-pill bg-danger ms-1">
+                3
+              </span>
+            </div>
 
-          <img src={profile} alt="profile" width={40} />
+            {!userAuth ? (
+              ""
+            ) : (
+              <div className="col d-flex align-items-center">
+                <img src={profile} alt="profile" width={40} />
+                <p className="my-2 mx-3 fw-bold">{name}</p>
+                <p className="m-2 logout" onClick={logout}>
+                  <LogoutIcon />
+                </p>
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </>
