@@ -1,0 +1,10 @@
+.back {
+    text-decoration: none;
+    color: black;
+}
+
+.button-edit {
+    cursor: pointer;
+    float: inline-end;
+    margin-right: 0;
+}

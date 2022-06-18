@@ -10,7 +10,7 @@ import { Button } from "react-bootstrap";
 import LogoutIcon from "@mui/icons-material/Logout";
 
 // assets
-import logo from "../assets/logo.png";
+import logo from "../assets/logo.jpg";
 
 export default function Sidebar() {
   const [user, setUser] = useState(false);
@@ -36,16 +36,21 @@ export default function Sidebar() {
   return (
     <>
       <div className="sidebar">
-        <img
-          src={logo}
-          alt="logo"
-          className="justify-content-center ms-2 my-4 pt-1"
-          width={150}
-        />
+        <Link to="/">
+          <div className="my-4 pt-3 pb-2 fw-bold fs-5 logo">
+            <img
+              src={logo}
+              alt="logo"
+              className="justify-content-center"
+              width={50}
+            />{" "}
+            Daksysteem
+          </div>
+        </Link>
         {sidebarData.map((value, index) => {
           return (
             <Link to={value.link} className="link">
-              <li key={index} className="p-1 m-2 align-items-center">
+              <li key={index} className="p-1 m-2 align-items-center li-sidebar">
                 <span className="me-2">{value.icon}</span> {value.title}
               </li>
             </Link>

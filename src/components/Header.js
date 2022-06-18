@@ -44,7 +44,7 @@ function Header() {
 
   return (
     <>
-      <div className="row p-4 bg-white align-items-center">
+      <div className="row p-3 bg-white align-items-center row-header">
         <div className="col-md-3">
           <h4 className="m-1">Employee Profile</h4>
         </div>
@@ -67,13 +67,13 @@ function Header() {
         <div className="col-md-5">
           <div className="row">
             <div className="col">
-              <Button variant="light" className="rounded-pill">
+              <Button variant="light" className="rounded-pill my-3">
                 <HelpOutlineIcon />
               </Button>
-              <Button variant="light" className="rounded-pill">
+              <Button variant="light" className="rounded-pill my-3">
                 <InfoOutlinedIcon />
               </Button>
-              <Button variant="light" className="rounded-pill">
+              <Button variant="light" className="rounded-pill my-3">
                 <NotificationsNoneOutlinedIcon />
               </Button>
               <span className="span-notif position-relative translate-middle badge rounded-pill bg-danger ms-1">
@@ -84,10 +84,13 @@ function Header() {
             {!userAuth ? (
               ""
             ) : (
-              <div className="col d-flex align-items-center">
+              <div className="col d-flex align-items-center header-profile">
                 <img src={profile} alt="profile" width={40} />
-                <p className="my-2 mx-3 fw-bold">{name}</p>
-                <p className="m-2 logout" onClick={logout}>
+                <ul>
+                  <li className="li-profil-satu fw-bold">{name}</li>
+                  <li className="li-profil-status text-muted">Admin</li>
+                </ul>
+                <p className="ms-5 my-3 logout" onClick={logout}>
                   <LogoutIcon />
                 </p>
               </div>

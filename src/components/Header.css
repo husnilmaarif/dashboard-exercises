@@ -9,3 +9,17 @@
 .logout {
   cursor: pointer;
 }
+
+.header-profile ul {
+  margin-top: 13px;
+}
+
+.li-profil-satu, .li-profil-status {
+  font-size: small;
+  list-style-type: none;
+  margin-left: -25px;
+}
+
+.row-header {
+  box-shadow: 2px 2px #e1e1e1;
+}

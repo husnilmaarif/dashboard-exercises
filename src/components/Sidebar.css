@@ -1,8 +1,8 @@
-li {
+.li-sidebar {
     list-style-type: none;
 }
 
-li:hover {
+.li-sidebar:hover {
     background-color: rgb(214, 236, 245);
     font-weight: bold;
 }
@@ -12,4 +12,9 @@ li:hover {
   text-decoration: none;
   color: black;
   font-size: 15px;
+}
+
+.logo {
+  text-decoration: none;
+  color: black;
 }
