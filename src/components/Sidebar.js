@@ -49,8 +49,8 @@ export default function Sidebar() {
         </Link>
         {sidebarData.map((value, index) => {
           return (
-            <Link to={value.link} className="link">
-              <li key={index} className="p-1 m-2 align-items-center li-sidebar">
+            <Link to={value.link} className="link" key={index}>
+              <li className="p-1 m-2 align-items-center li-sidebar">
                 <span className="me-2">{value.icon}</span> {value.title}
               </li>
             </Link>
