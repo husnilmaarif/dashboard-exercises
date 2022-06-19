@@ -3,6 +3,7 @@ import "./Dashboard.css";
 import { useNavigate, Link } from "react-router-dom";
 import { auth } from "../config/Firebase";
 import { onAuthStateChanged } from "firebase/auth";
+import Header from "../components/Header";
 
 function HomePage() {
   const [google, setGoogle] = useState("");
@@ -28,6 +29,7 @@ function HomePage() {
 
   return (
     <>
+      <Header header="Dashboard" />
       <div className="container-fluid d-flex header-homepage justify-content-center align-items-center">
         <button
           className="text-light greeting btn-primary me-4"

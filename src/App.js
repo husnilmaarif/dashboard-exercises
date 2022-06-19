@@ -3,7 +3,6 @@ import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // components
-import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 
 // pages
@@ -31,7 +30,6 @@ function App() {
             <Sidebar />
           </div>
           <div className="col-md-10 bg-light">
-            <Header />
             <Routes>
               <Route path="/" exact element={<Dashboard />} />
               <Route path="/company" element={<Company />} />

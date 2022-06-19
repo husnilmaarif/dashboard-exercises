@@ -7,6 +7,7 @@ import {
 } from "firebase/auth";
 import { auth } from "../config/Firebase";
 import google from "../assets/logo-google.png";
+import Header from "../components/Header";
 
 const provider = new GoogleAuthProvider();
 
@@ -56,6 +57,7 @@ function Login() {
 
   return (
     <>
+      <Header header="Login" />
       <div className="row justify-content-center my-5">
         <div className="col-md-6 text-center p-5 bg-light">
           <h1 className="text-center">Login</h1>

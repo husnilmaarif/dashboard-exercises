@@ -4,6 +4,7 @@ import "./Detail.css";
 import profile from "../assets/profile.png";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import EditIcon from "@mui/icons-material/Edit";
+// import detailCardsData from "../data/DetailData";
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 
@@ -52,6 +53,22 @@ function Detail() {
       </div>
 
       {/* cards */}
+      {/* {detailCardsData.map((card, index) => {
+        return (
+          <div className="row mt-4" key={index}>
+            <div className="col bg-white shadow-sm p-3 me-3">
+              <p>
+                {card.title}
+              </p>
+              <h3>&#8364;{card.cost}</h3>
+              <p className="text-success fw-bold text-end">
+                {card.icon} {card.quantity}
+              </p>
+            </div>
+          </div>
+        );
+      })} */}
+
       <div className="row mt-4">
         <div className="col bg-white shadow-sm p-3 me-3">
           <p>

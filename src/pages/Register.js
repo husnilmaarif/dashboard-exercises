@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../config/Firebase";
+import Header from "../components/Header";
 
 function Register() {
   const [email, setEmail] = useState("");
@@ -41,6 +42,7 @@ function Register() {
 
   return (
     <>
+      <Header header="Register" />
       <div className="row justify-content-center my-5">
         <div className="col-md-6 text-center p-5 bg-light">
           <h1 className="text-center">Registrasi</h1>

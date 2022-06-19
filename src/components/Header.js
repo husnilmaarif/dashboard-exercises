@@ -10,8 +10,9 @@ import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNoneOutlined";
 import profile from "../assets/profile.png";
 import LogoutIcon from "@mui/icons-material/Logout";
+// import { sidebarData } from "../data/SidebarData";
 
-function Header() {
+function Header({ header }) {
   const [user, setUser] = useState("");
   const [userAuth, setUserAuth] = useState(false);
   const [name, setName] = useState("");
@@ -46,7 +47,7 @@ function Header() {
     <>
       <div className="row p-3 bg-white align-items-center row-header">
         <div className="col-md-3">
-          <h4 className="m-1">Employee Profile</h4>
+          <h4 className="m-1 text-dark">{header}</h4>
         </div>
 
         <div className="col-md-4">

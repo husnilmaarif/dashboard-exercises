@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
+import Header from "../components/Header";
 
 function Settings() {
   return (
-    <div>Settings</div>
-  )
+    <>
+      <Header header="Settings" />
+      <h1 className="my-5 text-center">Settings</h1>
+    </>
+  );
 }
 
-export default Settings
+export default Settings;
