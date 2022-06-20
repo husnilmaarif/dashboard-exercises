@@ -4,6 +4,7 @@ import { useNavigate, Link } from "react-router-dom";
 import { auth } from "../config/Firebase";
 import { onAuthStateChanged } from "firebase/auth";
 import Header from "../components/Header";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 function HomePage() {
   const [google, setGoogle] = useState("");
@@ -35,11 +36,11 @@ function HomePage() {
           className="text-light greeting btn-primary me-4"
           onClick={greeting}
         >
-          Selamat datang {google}, tombol ini bisa di klik
+          Selamat datang {google}
         </button>
         <button className="text-light employee btn-primary">
           <Link className="link-employee" to="/employee">
-            Halaman Employee
+            Ke Halaman Employee <ArrowForwardIcon />
           </Link>
         </button>
       </div>
