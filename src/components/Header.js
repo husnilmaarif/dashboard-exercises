@@ -10,7 +10,6 @@ import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNoneOutlined";
 import profile from "../assets/profile.png";
 import LogoutIcon from "@mui/icons-material/Logout";
-// import { sidebarData } from "../data/SidebarData";
 
 function Header({ header }) {
   const [user, setUser] = useState("");
@@ -24,12 +23,13 @@ function Header({ header }) {
       if (user) {
         setUserAuth(true);
         setName(user.displayName);
+        navigate("/employee");
       } else {
         setUserAuth(false);
         navigate("/login");
       }
     });
-  });
+  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -45,11 +45,13 @@ function Header({ header }) {
 
   return (
     <>
+      {/* routes header */}
       <div className="row p-3 bg-white align-items-center row-header">
         <div className="col-md-3">
           <h4 className="m-1 text-dark">{header}</h4>
         </div>
 
+        {/* search */}
         <div className="col-md-4">
           <Form onSubmit={handleSubmit}>
             <InputGroup size="md" className="rounded-pill">
@@ -65,6 +67,7 @@ function Header({ header }) {
           </Form>
         </div>
 
+        {/* icon */}
         <div className="col-md-5">
           <div className="row">
             <div className="col">
@@ -82,16 +85,17 @@ function Header({ header }) {
               </span>
             </div>
 
+            {/* photo, name, logout === profile admin */}
             {!userAuth ? (
               ""
             ) : (
               <div className="col d-flex align-items-center header-profile">
                 <img src={profile} alt="profile" width={40} />
-                <ul>
+                <ul className="w-100">
                   <li className="li-profil-satu fw-bold">{name}</li>
                   <li className="li-profil-status text-muted">Admin</li>
                 </ul>
-                <p className="ms-5 my-3 logout" onClick={logout}>
+                <p className=" my-3 logout" onClick={logout}>
                   <LogoutIcon />
                 </p>
               </div>

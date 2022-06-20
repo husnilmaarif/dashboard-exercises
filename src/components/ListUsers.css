@@ -1,3 +1,16 @@
 .link-users {
     text-decoration: none;
 }
+
+.done {
+    color: green;
+    background-color: greenyellow;
+}
+
+.opsi {
+    cursor: pointer;
+}
+
+.tr-user {
+    padding: 20px;
+}

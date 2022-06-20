@@ -1,14 +1,28 @@
-import React from "react";
-import { Link } from "react-router-dom";
 import "./Detail.css";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { auth } from "../config/Firebase";
+import { onAuthStateChanged } from "firebase/auth";
 import profile from "../assets/profile.png";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import EditIcon from "@mui/icons-material/Edit";
-// import detailCardsData from "../data/DetailData";
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 
 function Detail() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        console.log(user);
+        setName(user.displayName);
+        setEmail(user.email);
+      }
+    });
+  }, []);
+
   return (
     <>
       {/* icon back */}
@@ -29,7 +43,7 @@ function Detail() {
           <table>
             <tr>
               <td>Name</td>
-              <td className="fw-bold"> : Husnil Maarif</td>
+              <td className="fw-bold"> : {name}</td>
             </tr>
             <tr>
               <td>Date of Birth</td>
@@ -37,7 +51,7 @@ function Detail() {
             </tr>
             <tr>
               <td>Email</td>
-              <td className="fw-bold"> : Contoh@gmail.com</td>
+              <td className="fw-bold"> : {email}</td>
             </tr>
             <tr>
               <td>Phone Number</td>
@@ -53,22 +67,6 @@ function Detail() {
       </div>
 
       {/* cards */}
-      {/* {detailCardsData.map((card, index) => {
-        return (
-          <div className="row mt-4" key={index}>
-            <div className="col bg-white shadow-sm p-3 me-3">
-              <p>
-                {card.title}
-              </p>
-              <h3>&#8364;{card.cost}</h3>
-              <p className="text-success fw-bold text-end">
-                {card.icon} {card.quantity}
-              </p>
-            </div>
-          </div>
-        );
-      })} */}
-
       <div className="row mt-4">
         <div className="col bg-white shadow-sm p-3 me-3">
           <p>
