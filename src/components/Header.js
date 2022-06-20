@@ -23,7 +23,6 @@ function Header({ header }) {
       if (user) {
         setUserAuth(true);
         setName(user.displayName);
-        navigate("/employee");
       } else {
         setUserAuth(false);
         navigate("/login");
